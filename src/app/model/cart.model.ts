@@ -37,7 +37,7 @@ export class Cart {
 
   removeItem(id: number) {
     let index = this.items.findIndex(i=>i.product.id == id);
-    this.items.splice(index, 2)
+    this.items.splice(index, 1)
     this.calculate();
   }
 
