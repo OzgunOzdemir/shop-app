@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { ShopModule } from './shop/shop.module'
 
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
+import { ShopComponent } from './shop/shop.component';
+import { CartDetailComponent } from './shop/cart-detail/cart-detail.component';
+import { CheckoutComponent } from './shop/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -10,7 +14,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    ShopModule
+    ShopModule,
+    RouterModule.forRoot([
+      { path: 'shop', component: ShopComponent },
+      { path: 'cart', component: CartDetailComponent },
+      { path: 'checkout', component: CheckoutComponent },
+      { path: '**', redirectTo: "/shop" }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
