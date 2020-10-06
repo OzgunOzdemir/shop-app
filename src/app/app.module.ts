@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ShopModule } from './shop/shop.module'
+import { ShopModule } from './shop/shop.module';
+import { AdminModule } from './admin/admin.module'
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -19,6 +20,7 @@ import { CheckoutComponent } from './shop/checkout/checkout.component';
       { path: 'shop', component: ShopComponent },
       { path: 'cart', component: CartDetailComponent },
       { path: 'checkout', component: CheckoutComponent },
+      { path: 'admin', loadChildren : './admin/admin.module#AdminModule' },
       { path: '**', redirectTo: "/shop" }
     ])
   ],
