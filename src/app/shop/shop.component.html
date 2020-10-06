@@ -3,20 +3,8 @@
 <div class="container pt-100 mb-5">
   <div class="row">
     <div class="col-3">
-      <div class="list-group">
-        <button
-          (click)="changeCategory()"
-          class="list-group-item list-group-item-action"
-          >Tüm Kategoriler</button
-        >
-        <button
-          *ngFor="let c of categories"
-          (click)="changeCategory(c)"
-          class="list-group-item list-group-item-action"
-          [class.active]="c == selectedCategory"
-          >{{ c.name }}</button
-        >
-      </div>
+      <cart-summary></cart-summary>
+      <category-list (category)="getCategory($event)"></category-list>
     </div>
     <div class="col-9">
       <div class="row">
