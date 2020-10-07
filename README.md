@@ -14,3 +14,6 @@ ng serve
 npm run json
 ```
 
+## How to visit the application
+https://shop-app.ozgunozdemir92.vercel.app/shop
+
